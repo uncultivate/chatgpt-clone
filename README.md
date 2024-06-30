@@ -10,9 +10,13 @@ JonoGPT is a Streamlit-based chat application that leverages OpenAI's GPT-4 mode
 - **New Chat**: Start a new conversation at any time.
 - **Clear History**: Clear all chat history.
 
+## Screenshot
+![image](https://github.com/uncultivate/chatgpt-clone/assets/16507524/ac804fdf-7a49-439d-b5e8-7c6df177a5a8)
+
 ## Installation
 
 1. **Clone the repository**:
    ```sh
    git clone https://github.com/your-username/jonogpt.git
    cd jonogpt
+
