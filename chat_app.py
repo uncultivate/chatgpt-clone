@@ -163,12 +163,16 @@ for chat_id, summary, date in chats:
     category = categorize_date(date)
     chats_by_category[category].append((chat_id, summary, date))
 
-for category, chats in sorted(chats_by_category.items(), reverse=True):
-    st.sidebar.write(f"### {category}")
-    for chat_id, summary, date in chats:
-        button_label = summary if summary else f"Conversation {chat_id} ({date})"
-        if st.sidebar.button(button_label, use_container_width=True):
-            load_conversation(chat_id)
+# Order of categories
+categories_order = ["Today", "Yesterday", "Previous 7 Days", "Previous 30 Days", "Older"]
+
+for category in categories_order:
+    if category in chats_by_category:
+        st.sidebar.write(f"### {category}")
+        for chat_id, summary, date in chats_by_category[category]:
+            button_label = summary if summary else f"Conversation {chat_id} ({date})"
+            if st.sidebar.button(button_label, use_container_width=True):
+                load_conversation(chat_id)
 
 st.sidebar.divider()
 if st.sidebar.button("Clear History"):
