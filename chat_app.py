@@ -113,7 +113,7 @@ def clear_history():
 
 # Display Model
 st.sidebar.write("Version: 0.1")
-st.sidebar.write("Model: GPT 4o")
+st.sidebar.write("Model: GPT 4o mini")
 
 # Create new chats
 if st.sidebar.button("New Chat"):
